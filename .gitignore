@@ -1,6 +1,16 @@
-coverage
+# package directories
 node_modules
-.coverage-cache
-dist
-*.config.js
-*.spec.js
+jspm_packages
+build
+coverage
+.nyc_output
+coverage
+.env
+*.log
+.DS_STORE
+.DS_Store
+.env
+# Serverless directories
+.serverless
+.eslintcache
+
