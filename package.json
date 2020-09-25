@@ -1,0 +1,36 @@
+{
+  "name": "merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "auto-bind": "^4.0.0",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "chokidar": "^3.4.2",
+    "cli": "^1.0.1",
+    "debug": "^4.2.0",
+    "get-port": "^5.1.1",
+    "jsdom": "^16.4.0",
+    "live-server": "^1.2.1",
+    "mime-types": "^2.1.27",
+    "node-fetch": "^2.6.1",
+    "openurl": "^1.1.1",
+    "pretty": "^2.0.0",
+    "progress": "^2.0.3",
+    "readline": "^1.3.0",
+    "websocket": "^1.0.32"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
