@@ -1,5 +1,5 @@
 
-name: Test on commit
+name: Tests
 
 on: [push, pull_request]
 
