@@ -21,7 +21,7 @@ jobs:
     - run: npm install
     - run: npm test
     - name: Publish if version has been updated
-    - uses: JS-DevTools/npm-publish@v1
+      uses: JS-DevTools/npm-publish@v1
       with:
         check-version: true
         dry-run: true
