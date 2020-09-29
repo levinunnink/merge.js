@@ -40,13 +40,17 @@ which the Merge engine will convert to
 
 Open your terminal and run:
 
-`$ npm install -g merge`
+```bash
+$ npm install -g merge
+```
 
 **CDN:**
 
 You can put this reference in the body of your HTML page.
 
-`<script src="..."></script>`
+```html
+<script src="..."></script>
+```
 
 **Note:** We recommend that you only use the CDN version for development purposes. For production deployment, use the NPM version.
 
