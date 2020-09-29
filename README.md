@@ -110,6 +110,9 @@ You can load data directly into the state using a JSON object:
   });
 </script>
 ```
+## Merge Attributes
+
+Merge uses `data` attributes to tell the engine how to merge the data with the HTML elements.
 
 ### Includes: data-merge-include
 
