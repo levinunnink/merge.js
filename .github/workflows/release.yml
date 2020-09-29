@@ -24,4 +24,5 @@ jobs:
       uses: JS-DevTools/npm-publish@v1
       with:
         check-version: true
+        access: 'public'
         token: ${{ secrets.NPM_AUTH_TOKEN }}
