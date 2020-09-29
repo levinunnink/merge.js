@@ -39,6 +39,11 @@ which the Merge engine will convert to
   - [Loading from a URL](#loading-from-a-url)
   - [Loading from a JSON object](#loading-from-a-json-object)
   - [Merge Attributes](#merge-attributes)
+  - [Includes: data-merge-include](#includes-data-merge-include)
+  - [Variables: data-merge-content](#variables-data-merge-content)
+  - [Conditionals: data-merge-if](#conditionals-data-merge-if)
+  - [Loops: data-merge-repeat](#loops-data-merge-repeat)
+  
 
 ### Principles
 
@@ -123,6 +128,10 @@ You can load data directly into the state using a JSON object:
   });
 </script>
 ```
+
+## Merge Attributes
+
+Merge reads `data` attributes on the elements to understand how to merge the state data with the HTML.
 
 ### Includes: data-merge-include
 
