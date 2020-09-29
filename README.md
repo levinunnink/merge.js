@@ -31,7 +31,7 @@ which the Merge engine will convert to
 
 - [Principles](#principles)
 - [Installation](#installation)
-- [Running Merge](#running-merge)
+- [Usage](#usage)
   - [Starting a Merge Server](#starting-a-merge-server)
   - [Building Static HTML](#building-static-html)
 - [Merge HTML Guide](#merge-html-guide)
@@ -72,7 +72,7 @@ You can put this reference in the body of your HTML page.
 
 **Note:** We recommend that you only use the CDN version for development purposes. For production deployment, use the NPM version.
 
-## Running Merge
+## Usage
 
 Once you've installed the Merge engine, you can start a server or build your HTML for production.
 
