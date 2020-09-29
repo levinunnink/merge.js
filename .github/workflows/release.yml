@@ -25,4 +25,4 @@ jobs:
       with:
         check-version: true
         dry-run: true
-        token: ${{ secrets.NPM_TOKEN }}
+        token: ${{ secrets.NPM_AUTH_TOKEN }}
