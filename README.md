@@ -29,10 +29,10 @@ which the Merge engine will convert to
 
 ### Principles
 
-- **HTML + CSS first.** For most sites, static site generators are overkill. Why not just build your site structure using plan ol' HTML? Build your layout in CSS.
-- **Clean static output.** Merge cleans up after itself. After Merge is done building your HTML, it removes all signs that it was ever there.
-- **Dynamic development.** Because Merge is written in Javascript, you can run it right in your browser without any hassle. Our server will watch your HTML for changes and automatically refresh as you work.
-- **Zero configuration.** Running Merge should just work. Write HTML and CSS, not config files.
+- ☝️ **HTML + CSS first.** For most sites, static site generators are overkill. You can structure your site using HTML and folders, without needing a generator.
+- 🛀 **Clean static output.** Merge cleans up after itself. After Merge is done building your HTML, it removes all signs that it was ever there.
+- 🔥 **Dynamic development.** Because Merge is written in Javascript, you can run it right in your browser without any hassle. Our server will watch your HTML for changes and automatically refresh as you work.
+- 👌 **Zero configuration.** Running Merge should just work. Write HTML and CSS, not config files.
 
 ### Installation
 
