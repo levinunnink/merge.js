@@ -82,7 +82,7 @@ $ merge build ./path-to/my-folder ./path-to/my-destination
 
 Merge uses standards-compliant HTML to communicate with the engine and explain how to merge the JSON data with the HTML tags. The goal of this is to allow you to do as much as possible with simple HTML development, instead of forcing you to learn new workflows and write HTML using Javascript.
 
-## Loading data into the engine state
+## Loading data into the engine
 
 To merge your HTML with the data, the Merge engine needs a JSON object that describes the data. This is the one place where you need to use a little Javascript. Any data you load must be in a valid JSON format. Merge will render your page once all `loadState` functions are complete.
 
