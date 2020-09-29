@@ -27,6 +27,19 @@ which the Merge engine will convert to
 </html>
 ```
 
+## Table of Contents
+
+- [Principles](#principles)
+- [Installation](#installation)
+- [Running Merge](#running-merge)
+  - [Starting a Merge Server](#starting-a-merge-server)
+  - [Building Static HTML](#building-static-html)
+- [Merge HTML Guide](#merge-html-guide)
+  - [Loading data into the engine](#loading-data-into-the-engine)
+  - [Loading from a URL](#loading-from-a-url)
+  - [Loading from a JSON object](#loading-from-a-json-object)
+  - [Merge Attributes](#merge-attributes)
+
 ### Principles
 
 - ☝️ **HTML + CSS first.** For most sites, static site generators are overkill. You can structure your site using HTML and folders, without needing a generator.
@@ -82,7 +95,7 @@ $ merge build ./path-to/my-folder ./path-to/my-destination
 
 Merge uses standards-compliant HTML to communicate with the engine and explain how to merge the JSON data with the HTML tags. The goal of this is to allow you to do as much as possible with simple HTML development, instead of forcing you to learn new workflows and write HTML using Javascript.
 
-## Loading data into the engine
+## Loading data into the engine state
 
 To merge your HTML with the data, the Merge engine needs a JSON object that describes the data. This is the one place where you need to use a little Javascript. Any data you load must be in a valid JSON format. Merge will render your page once all `loadState` functions are complete.
 
@@ -110,9 +123,6 @@ You can load data directly into the state using a JSON object:
   });
 </script>
 ```
-## Merge Attributes
-
-Merge uses `data` attributes to tell the engine how to merge the data with the HTML elements.
 
 ### Includes: data-merge-include
 
