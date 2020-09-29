@@ -4,7 +4,7 @@
 
 Merge is a HTML templating engine for HTML developers. It's primary function is to merge JSON data into HTML templates using standards compliant HTML. It uses Javascript and Node.js but it doesn't require you to know Javascript or Node.js. You can run it in the browser and the command line.
 
-A simple merge template looks like:
+A basic merge template looks like:
 
 ```html
 <html>
