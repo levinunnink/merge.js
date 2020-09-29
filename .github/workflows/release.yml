@@ -1,0 +1,32 @@
+name: release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+        - 12.x
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm test
+    - name: Publish if version has been updated
+      uses: pascalgn/npm-publish-action@06e0830ea83eea10ed4a62654eeaedafb8bf50fc
+      with: # All of theses inputs are optional
+        tag_name: "v%s"
+        tag_message: "v%s"
+        commit_pattern: "^Release (\\S+)"
+        workspace: "."
+      env: # More info about the environment variables in the README
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
