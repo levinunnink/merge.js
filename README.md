@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/levinunnink/merge.js/workflows/Tests/badge.svg)](https://github.com/levinunnink/merge.js/actions)
 
-Merge is a HTML templating engine written in JS that solves common problems for HTML developers. It's primary function is to merge JSON data into HTML templates using standards compliant HTML. It uses Javascript and Node.js but it doesn't require you to know Javascript or Node.js. You can run it in the browser and the command line.
+Merge is a HTML templating engine for HTML developers. It's primary function is to merge JSON data into HTML templates using standards compliant HTML. It uses Javascript and Node.js but it doesn't require you to know Javascript or Node.js. You can run it in the browser and the command line.
 
 A simple merge template looks like:
 
