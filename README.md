@@ -58,7 +58,7 @@ which the Merge engine will convert to
 
 Open your terminal and run:
 
-```bash
+```shell
 $ npm install -g merge
 ```
 
@@ -74,13 +74,26 @@ You can put this reference in the body of your HTML page.
 
 ## Usage
 
+```shell
+Usage: merge [options] [command]
+
+Options:
+  -V, --version                        output the version number
+  -h, --help                           display help for command
+
+Commands:
+  serve <directory>                    Serves a local directory using the merge runtime
+  build <directory> [destinationPath]  Compiles the local HTML and outputs it to the destination path
+  help [command]                       display help for command
+```
+
 Once you've installed the Merge engine, you can start a server or build your HTML for production.
 
 ### Starting a Merge server
 
 The Merge server will automatically run your HTML inside of the Merge engine and reload in the browser as you make changes. 
 
-```bash
+```shell
 $ merge serve ./path-to/my-folder
 ```
 
@@ -92,7 +105,7 @@ _⚠️ You should only use the Merge server for local development. It is not su
 
 To build your HTML with Merge, you'll also need to specify a destination folder where you want your built HTML to go.
 
-```bash
+```shell
 $ merge build ./path-to/my-folder ./path-to/my-destination
 ```
 
