@@ -1,0 +1,37 @@
+name: release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+        - 12.x
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm test
+    - name: Publish if version has been updated
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        check-version: true
+        token: ${{ secrets.NPM_AUTH_TOKEN }}
+  tag-new-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - uses: salsify/action-detect-and-tag-new-version@v2
+
