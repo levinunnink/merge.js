@@ -225,6 +225,11 @@ You can loop over elements in an Array using the `data-merge-repeat` and Javascr
 
 If you have ideas for improvements, feel free to open a PR or an issue and I'll do my best to review it promptly.
 
----
+## Author
 
-Author: Levi Nunnink - [@levinunnink](https://github.com/levinunnink)
+- Levi Nunnink - [@levinunnink](https://twitter.com/levinunnink)
+
+## License
+
+Published under the MIT License.
+
