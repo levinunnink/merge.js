@@ -59,7 +59,7 @@ which the Merge engine will convert to
 Open your terminal and run:
 
 ```shell
-$ npm install -g merge
+$ npm install -g @smmall/merge
 ```
 
 **CDN:**
