@@ -1,9 +1,10 @@
 {
   "name": "@smmall/merge",
-  "version": "1.0.0-alpha2",
+  "version": "1.0.0-alpha3",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "mkdir ./dist && minify ./lib/Merge.js > ./dist/Merge.min.js",
     "test": "jest --detectOpenHandles",
     "test:ci": "jest test/unit --coverage --maxWorkers=2"
   },
@@ -43,6 +44,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "jest": "^26.4.2",
+    "minify": "^6.0.0",
     "sinon": "^9.0.3",
     "sinon-chai": "^3.5.0"
   }
