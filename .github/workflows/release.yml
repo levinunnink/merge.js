@@ -7,6 +7,10 @@ name: Upload Release Asset
 
 jobs:
   build:
+    strategy:
+      matrix:
+        node-version:
+        - 12.x
     name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +20,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        run: npm install
+      - run: npm install
       - name: Archive project
         id: archive_project
         run: ::set-output name=archive::$(npm pack)
