@@ -67,7 +67,7 @@ $ npm install -g @smmall/merge
 You can put this reference in the body of your HTML page.
 
 ```html
-<script src="..."></script>
+<script src="https://unpkg.com/@smmall/merge/dist/Merge.min.js"></script>
 ```
 
 **Note:** We recommend that you only use the CDN version for development purposes. For production deployment, use the NPM version.
