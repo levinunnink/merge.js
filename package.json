@@ -1,6 +1,6 @@
 {
   "name": "@smmall/merge",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,10 @@
   },
   "bin": {
     "merge": "./bin/merge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/levinunnink/merge.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +26,6 @@
     "debug": "^4.2.0",
     "get-port": "^5.1.1",
     "jsdom": "^16.4.0",
-    "live-server": "^1.2.1",
     "mime-types": "^2.1.27",
     "node-fetch": "^2.6.1",
     "openurl": "^1.1.1",
