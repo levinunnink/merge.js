@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/levinunnink/merge.js/workflows/Tests/badge.svg)](https://github.com/levinunnink/merge.js/actions) [![npm version](https://badge.fury.io/js/%40smmall%2Fmerge.svg)](https://badge.fury.io/js/%40smmall%2Fmerge)
 
-Merge is a HTML templating engine for HTML developers. It's primary function is to merge JSON data into HTML files using standards compliant HTML and output it to the browser or file system. It gives the same output if you're running it in your browser or publishing it as static html.
+Merge is a HTML templating engine for HTML developers that's portable enough to run in the browser or on the command line. It's primary function is to merge JSON data into HTML files using standards compliant HTML and output it to the browser or file system. It gives the same output if you're running it in your browser or publishing it as static html.
 
 A basic merge template looks like:
 
