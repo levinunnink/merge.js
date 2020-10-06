@@ -48,6 +48,7 @@ which the Merge engine will convert to
 ### Principles
 
 - ☝️ **HTML + CSS first.** Merge is here to empower you to build your site in HTML without having to resort to a static site generator, or switching to Javascript.
+- ⛵️ **Portability.** Merge is a template engine that is portable. You can embed it in your apps or build process with minimal effort. 
 - 🛀 **Clean static output.** Merge cleans up after itself. After Merge is done building your HTML, it removes all signs that it was ever there.
 - 🔥 **Dynamic development.** Because Merge is written in Javascript, you can run it right in your browser without any hassle. Our server will watch your HTML for changes and automatically refresh as you work.
 - 👌 **Zero configuration.** Running Merge should just work. We want to help you write HTML and CSS, not config files.
