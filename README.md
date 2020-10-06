@@ -1,8 +1,8 @@
 # Merge
 
-[![Actions Status](https://github.com/levinunnink/merge.js/workflows/Tests/badge.svg)](https://github.com/levinunnink/merge.js/actions)
+[![Actions Status](https://github.com/levinunnink/merge.js/workflows/Tests/badge.svg)](https://github.com/levinunnink/merge.js/actions) [![npm version](https://badge.fury.io/js/%40smmall%2Fmerge.svg)](https://badge.fury.io/js/%40smmall%2Fmerge)
 
-Merge is a HTML templating engine for HTML developers. It's primary function is to merge JSON data into HTML files using standards compliant HTML and output it to the browser or file system. It gives the same output if you're running it in your browser or publishing it as static html.
+Merge is a HTML templating engine for HTML developers that's portable enough to run in the browser or on the command line. It's primary function is to merge JSON data into HTML files using standards compliant HTML and output it to the browser or file system. It gives the same output if you're running it in your browser or publishing it as static html.
 
 A basic merge template looks like:
 
@@ -48,6 +48,7 @@ which the Merge engine will convert to
 ### Principles
 
 - ☝️ **HTML + CSS first.** Merge is here to empower you to build your site in HTML without having to resort to a static site generator, or switching to Javascript.
+- ⛵️ **Portability.** Merge is a template engine that is portable. You can embed it in your apps or build process with minimal effort. 
 - 🛀 **Clean static output.** Merge cleans up after itself. After Merge is done building your HTML, it removes all signs that it was ever there.
 - 🔥 **Dynamic development.** Because Merge is written in Javascript, you can run it right in your browser without any hassle. Our server will watch your HTML for changes and automatically refresh as you work.
 - 👌 **Zero configuration.** Running Merge should just work. We want to help you write HTML and CSS, not config files.
