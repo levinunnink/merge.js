@@ -124,7 +124,9 @@ You can load your JSON data from a URL.
 
 ```html
 <script data-type="merge-script">
-  merge.loadState('https://my-site.com/data.json');
+  document.addEventListener('DOMContentLoaded', function() {
+    merge.loadState('/site.json');
+  }, false);
 </script>
 ```
 
@@ -137,9 +139,11 @@ You can load data directly into the state using a JSON object:
 ```html
 <h1>Hi, <span data-merge-content="name"></span></h1>
 <script data-type="merge-script">
-  merge.loadState({
-    name: 'Joe',
-  });
+  document.addEventListener('DOMContentLoaded', function() {
+    merge.loadState({
+      name: 'Joe',
+    });
+  }, false);
 </script>
 ```
 
@@ -162,12 +166,14 @@ You can set the content of an HTML element using the `data-merge-content` attrib
 ```html
 <h1>Hi <span data-merge-content="name.first"></span></h1>
 <script data-type="merge-script">
-  merge.loadState({
-    name: {
-      first: 'Jane',
-      last: 'Doe',
-    }
-  });
+  document.addEventListener('DOMContentLoaded', function() {
+    merge.loadState({
+      name: {
+        first: 'Jane',
+        last: 'Doe',
+      }
+    });
+  }, false);
 </script>
 ```
 
@@ -178,7 +184,9 @@ You can show or hide HTML elements using the `data-merge-if` and `data-merge-equ
 ```html
 <div data-merge-if="day" data-merge-equals="friday">TGIF!</div>
 <script data-type="merge-script">
-  merge.loadState({ day: 'friday' });
+  document.addEventListener('DOMContentLoaded', function() {
+    merge.loadState({ day: 'friday' });
+  }, false);
 </script>
 ```
 
@@ -188,7 +196,9 @@ If you only want to check for the existence of a property, you can leave off the
 <div data-merge-if="happy">YAY! I'm glad you're happy.</div>
 <div data-merge-if="sad">Aww! I'm sorry you're sad.</div>
 <script data-type="merge-script">
-  merge.loadState({ happy: true });
+  document.addEventListener('DOMContentLoaded', function() {
+    merge.loadState({ happy: true });
+  }, false);
 </script>
 ```
 
@@ -204,21 +214,23 @@ You can loop over elements in an Array using the `data-merge-repeat` and Javascr
   </li>
 </ul>
 <script data-type="merge-script">
+document.addEventListener('DOMContentLoaded', function() {
   merge.loadState({
     items: [{
-      link: "https://nunn.ink",
-      label: "Personal Site"
-    },
-    {
-      link: "https://twitter.com/LeviNunnink",
-      label: "Twitter"
-    },
-    {
-      link: "https://github.com/LeviNunnink",
-      label: "Github"
-    }
-  ],
-});
+        link: "https://nunn.ink",
+        label: "Personal Site"
+      },
+      {
+        link: "https://twitter.com/LeviNunnink",
+        label: "Twitter"
+      },
+      {
+        link: "https://github.com/LeviNunnink",
+        label: "Github"
+      }
+    ],
+  });
+}, false);
 </script>
 ```
 
