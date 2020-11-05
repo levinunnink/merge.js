@@ -1,6 +1,7 @@
 const chai = require('chai');
 const sinon = require('sinon');
 const {JSDOM} = require('jsdom');
+const marked = require('marked');
 const sinonChai = require('sinon-chai');
 chai.use(sinonChai);
 const { expect } = chai;
@@ -9,7 +10,7 @@ const Merge = require('../../lib/Merge');
 const testHTML = "\
   <html>\
   <body>\
-    <h2>Hello, <span data-merge-content='name'>...</span></h2>\
+    <h2>Hello, <span data-merge-content='name' id='merge-el'>...</span></h2>\
     <ul data-merge-repeat='items'>\
       <li>${name}</li>\
     </ul>\
@@ -19,6 +20,18 @@ const testHTML = "\
   </body>\
   </html>\
 ";
+
+const testHTMLMarkdown = `
+  <html>
+  <body>
+   <div data-merge-include-markdown="foobar.md"></div>
+  </body>
+  </html>
+`;
+
+const testMarkdown = `
+# Hello World
+`
 
 const testContext = {
   name: 'World',
@@ -120,6 +133,37 @@ describe('lib/Merge', () => {
       merge.loadState(testContext);
       await merge.parse();
       expect(merge.document.getElementById('merge-included')).to.not.be.null;
+    });
+    it('includes markdown files and parses the result into the dom', async () => {
+      dom = new JSDOM(testHTMLMarkdown, {
+        runScripts: 'dangerously',
+        beforeParse: (window) => {
+          // eslint-disable-next-line no-param-reassign
+          window.merge = merge;
+        },
+      });
+      merge.document = dom.window.document;
+      merge.parseMarkdown = marked;
+      merge.fetchAPI.fetch.restore();
+      sinon.stub(merge.fetchAPI, 'fetch').resolves({
+        text: async () => testMarkdown,
+      });
+      await merge.parse();
+      const xpath = "//h1[text()='Hello World']";
+      const matchingElement = merge.document.evaluate(xpath, merge.document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      expect(matchingElement).to.not.be.null;
+    });
+    it('show throw an error if the markdown parser is not defined', async () => {
+      dom = new JSDOM(testHTMLMarkdown, {
+        runScripts: 'dangerously',
+        beforeParse: (window) => {
+          // eslint-disable-next-line no-param-reassign
+          window.merge = merge;
+        },
+      });
+      merge.document = dom.window.document;
+      merge.parseMarkdown = undefined;
+      expect(merge.parse()).to.throw;
     });
   });
 });
