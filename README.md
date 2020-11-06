@@ -40,6 +40,7 @@ which the Merge engine will convert to
   - [Loading from a JSON object](#loading-from-a-json-object)
   - [Merge Attributes](#merge-attributes)
   - [Includes: data-merge-include](#includes-data-merge-include)
+  - [Markdown: data-merge-include-markdown](#markdown-data-merge-include-markdown)
   - [Variables: data-merge-content](#variables-data-merge-content)
   - [Conditionals: data-merge-if](#conditionals-data-merge-if)
   - [Loops: data-merge-repeat](#loops-data-merge-repeat)
@@ -157,6 +158,21 @@ You can include HTML files with Merge by adding the `data-merge-include` attribu
 
 ```html
 <div data-merge-include="footer.html"></div>
+```
+
+### Markdown: data-merge-include-markdown
+
+You can include and parse markdown files with Merge by adding the `data-merge-include-markdown` attribute to an element:
+
+```html
+<div data-merge-include="article.md"></div>
+```
+
+**Note:** If you're not running the local server or the complier, you will need to provide a markdown parsing function by setting the `parseMarkdown` property on the merge object. We recommend [marked](https://github.com/markedjs/marked) but you can use any function you want. Your function just needs to accept a markdown string and return the parsed html.
+
+```javascript
+const marked = require('marked');
+merge.parseMarkdown = marked;
 ```
 
 ### Variables: data-merge-content
