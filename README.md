@@ -1,4 +1,4 @@
-# Merge
+# Merge <img align="right" width="200" src="https://files.nunn.ink/AuGqPy.jpg" />
 
 [![Actions Status](https://github.com/levinunnink/merge.js/workflows/Tests/badge.svg)](https://github.com/levinunnink/merge.js/actions) [![npm version](https://badge.fury.io/js/%40smmall%2Fmerge.svg)](https://badge.fury.io/js/%40smmall%2Fmerge)
 
