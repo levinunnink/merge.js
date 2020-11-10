@@ -15,6 +15,9 @@ const testHTML = "\
       <li>${name}</li>\
     </ul>\
     <span data-merge-include='foobar.html'></span>\
+    <span data-merge-include='foobar.html' data-merge-include-type='append'>\
+      <span id='this-element-should-exist'></span>\
+    </span>\
     <div data-merge-if='type' data-merge-equals='yes'>YES</div>\
     <div data-merge-if='type' data-merge-equals='no'>NO</div>\
   </body>\
@@ -133,6 +136,12 @@ describe('lib/Merge', () => {
       merge.loadState(testContext);
       await merge.parse();
       expect(merge.document.getElementById('merge-included')).to.not.be.null;
+    });
+    it('appends files when the data-merge-include-type is present', async () => {
+      merge.parseMarkdown = marked;
+      merge.loadState(testContext);
+      await merge.parse();
+      expect(merge.document.getElementById('this-element-should-exist')).to.not.be.null;
     });
     it('includes markdown files and parses the result into the dom', async () => {
       dom = new JSDOM(testHTMLMarkdown, {

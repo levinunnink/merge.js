@@ -160,6 +160,15 @@ You can include HTML files with Merge by adding the `data-merge-include` attribu
 <div data-merge-include="footer.html"></div>
 ```
 
+**Note:** By default the `data-merge-include` attribute will replace the contents of the html element with the included html. If you want to append the contents to the html, use the `data-merge-include-type="append"` attribute.
+
+```html
+<head data-merge-include="meta.html">
+  <title>My page title</title>
+  <!-- The contents of meta.html will be added here -->
+</head>
+```
+
 ### Markdown: data-merge-include-markdown
 
 You can include and parse markdown files with Merge by adding the `data-merge-include-markdown` attribute to an element:
