@@ -29,7 +29,7 @@
     "jsdom": "^16.4.0",
     "marked": "^2.0.0",
     "mime-types": "^2.1.27",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "openurl": "^1.1.1",
     "pretty": "^2.0.0",
     "progress": "^2.0.3",
