@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Site coming soon</title>
+  <meta name="description" content="Something awesome is coming to this URL soon.">
+  <meta name="author" content="Levi Nunnink">
+  <link rel="stylesheet" href="/style.css" />
+<body>
+  <div class="container">
+    <div class="inside">
+      <h2>Hello, <span data-merge-content="name">...</span></h2>
+      <p>You can start publishing here any
+        time you want. Just open your local folder, make some changes, and hit publish.</p>
+      <p>Feel free to use this page as a starter template.</p>
+      <a href="/about/">ABOUT</a>
+      <ul class="links" data-merge-repeat="items">
+        <li>
+          <a href="${link}">${label}</a>
+        </li>
+      </ul>
+    </div>
+    <div data-merge-if="type" data-merge-equals="boom">BOOM</div>
+    <h2>Markdown Content:</h2>
+    <div data-merge-include-markdown="test.md"></div>
+    <div data-merge-include="footer.html"></div>
+  </div>
+  <script data-type="merge-script">
+    merge.loadState('/data.json');
+  </script>
+</body>
+</html>
